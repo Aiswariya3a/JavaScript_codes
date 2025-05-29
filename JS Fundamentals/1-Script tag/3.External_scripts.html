@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>External Scripts</title>
+</head>
+<body>
+    If we have a lot of JavaScript code, we can put it into a separate file. Multiple script files can be attached to HTML with the src attribute. We can give a full URL as well.
+    <h1>Why External?</h1>
+    <ul>
+    <li>As a rule, only the simplest scripts are put into HTML. More complex ones reside in separate files.</li>
+    <li>The benefit of a separate file is that the browser will download it and store it in its cache.</li>
+    <li>Other pages that reference the same script will take it from the cache instead of downloading it, so the file is actually downloaded only once.</li>
+    <li>That reduces traffic and makes pages faster.</li>
+    </ul>
+</body>
+<script src="/static/script1.js"></script>
+<script src="/static/script2.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js"></script>
+</html>

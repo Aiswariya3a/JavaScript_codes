@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>typeof operator</title>
+  </head>
+  <body>
+    <p>
+      The typeof operator returns the type of the operand.<br />
+      <b>Syntax</b><br />
+      You may also come across another syntax: typeof(x). It is the same as
+      typeof x.<br />
+      typeof is an operator, not a function.<br />
+      The parentheses here aren’t a part of typeof. <br />It’s the kind of
+      parentheses used for mathematical grouping.
+      <br />
+      <b>Exception</b><br />
+      The result of typeof null is "object". <br />
+      That is an officially recognized error in typeof, coming from very early
+      days of JavaScript and kept for compatibility. <br />
+      Definitely, null is not an object. It is a special value with a separate
+      type of its own. <br />
+      The behavior of typeof is wrong here.
+    </p>
+  </body>
+  <script>
+    typeof undefined; // "undefined"
+    typeof 0; // "number"
+    typeof 10n; // "bigint"
+    typeof true; // "boolean"
+    typeof "foo"; // "string"
+
+    typeof Math; // "object"  (1) - Math is a built-in object that provides mathematical operations
+    typeof null; // "object"  (2)
+    typeof Symbol("id"); // "symbol"
+
+    typeof alert; // "function"  - alert is a function
+  </script>
+</html>

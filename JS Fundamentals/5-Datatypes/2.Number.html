@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number datatypes</title>
+  </head>
+  <body>
+    <p>
+      The number type represents both integer and floating point numbers.<br />
+      Besides regular numbers, there are so-called “special numeric values”
+      which also belong to this data type: Infinity, -Infinity and NaN.<br />
+    </p>
+    <h2>NaN</h2>
+    <p>
+      NaN represents a computational error. It is a result of an incorrect or an
+      undefined mathematical operation<br />
+      NaN is sticky. Any further mathematical operation on NaN returns NaN<br />
+      if there is a NaN somewhere in a mathematical expression, it propagates to
+      the whole result (one exception to that: NaN ** 0 is 1).<br>
+      The script will never stop with a fatal error (“die”). At worst, we will get NaN as the result.
+    </p>
+  </body>
+  <script>
+    alert(1 / 0); // Infinity or alert( Infinity );
+    alert("not a number" / 2); // NaN, such division is erroneous
+    //stick NaN
+    alert(NaN + 1); // NaN
+    alert(3 * NaN); // NaN
+    alert("not a number" / 2 - 1); // NaN
+  </script>
+</html>

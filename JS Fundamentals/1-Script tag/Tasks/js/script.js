@@ -1,0 +1,1 @@
+alert("This alert is written in External Javascript");

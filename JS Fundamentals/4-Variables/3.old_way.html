@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Old way of assigning variable</title>
+  </head>
+  <body>
+    <p>
+      Normally, we need to define a variable before using it. But in the old
+      times, it was technically possible to create a variable by a mere
+      assignment of the value without using let. This still works now if we
+      don’t put use strict in our scripts to maintain compatibility with old
+      scripts.
+    </p>
+    <p><b>This is a bad practice and would cause an error in strict mode</b></p>
+  </body>
+  <script>
+    // note: no "use strict" in this example
+    num = 5; // the variable "num" is created if it didn't exist
+    alert(num); // 5
+  </script>
+</html>

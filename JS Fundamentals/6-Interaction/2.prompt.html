@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prompt Func</title>
+  </head>
+  <body>
+    The function prompt accepts two arguments: <br />
+    <dl>
+      <dt><b>title</b></dt>
+      <dd>The text to show the visitor.</dd>
+      <dt><b>default</b></dt>
+      <dd>
+        An optional second parameter, the initial value for the input field.
+      </dd>
+    </dl>
+    <br />
+    It shows a modal window with a text message, an input field for the visitor,
+    and the buttons OK/Cancel.<br />
+
+    <p>
+      The visitor can type something in the prompt input field and press OK. -
+      Then we get that text in the result.<br />
+      They can cancel the input by pressing Cancel or hitting the Esc key - then
+      we get null as the result.<br />
+    </p>
+  </body>
+  <script>
+    let age = prompt("How old are you?", 100); //here we have given default value, so if user cancels the input, we have the age as 100
+    alert(`You are ${age} years old!`); // You are 100 years old!
+  </script>
+</html>
