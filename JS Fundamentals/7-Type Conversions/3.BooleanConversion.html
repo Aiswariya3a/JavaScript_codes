@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boolean Conversion</title>
+  </head>
+  <body>
+    Boolean Conversion happens in logical operations. can also be performed
+    explicitly with Boolean(value).<br />
+    The conversion rule:<br />
+    <ul>
+      <li>
+        Values that are intuitively “empty”, like 0, an empty string, null,
+        undefined, and NaN, become <b>false</b>.
+      </li>
+      <li>Other values become <b>true</b>.</li>
+    </ul>
+    Some languages (namely PHP) treat "0" as false. But in JavaScript, a non-empty string is always true.
+  </body>
+  <script>
+    alert(Boolean(1)); // true
+    alert(Boolean(0)); // false
+
+    alert(Boolean("hello")); // true
+    alert(Boolean("")); // false
+
+    alert(Boolean("0")); // true
+    alert(Boolean(" ")); // spaces, also true (any non-empty string is true)
+  </script>
+</html>
