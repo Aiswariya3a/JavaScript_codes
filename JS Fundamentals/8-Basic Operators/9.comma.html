@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comma</title>
+  </head>
+  <body>
+    <p>
+      The comma operator allows us to evaluate several expressions, dividing
+      them with a comma ,. Each of them is evaluated but only the result of the
+      last one is returned.<br />
+      Mainly used in <b>'for'</b><br />
+      The comma operator has very low precedence, lower than = <br />
+      Without paranthesis:<br />
+      a = 1 + 2, 3 + 4 evaluates + first <br />
+      summing the numbers into a = 3, 7 <br />
+      then the assignment operator = assigns a = 3, and the rest is ignored
+      <br />
+      It is like (a = 1 + 2), 3 + 4.
+    </p>
+  </body>
+  <script>
+    let a = (1 + 2, 3 + 4);
+
+    alert(a); // 7 (the result of 3 + 4)
+  </script>
+</html>

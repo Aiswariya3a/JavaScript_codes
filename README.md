@@ -72,12 +72,68 @@ Welcome to my daily JavaScript learning journey! This README helps keep track of
 
 ---
 
+## ✅ Day 3 – Basic Operations & Comparisons
+
+### 📌 Topics Covered
+
+- **Basic Math Operations**
+  - Addition (`+`), subtraction (`-`), multiplication (`*`), division (`/`), remainder (`%`), exponentiation (`**`)
+
+- **String Concatenation**
+  - `+` operator concatenates strings:
+    ```js
+    "Hello" + " world" // "Hello world"
+    ```
+  - Mixed types trigger string conversion:
+    ```js
+    "1" + 2 // "12"
+    ```
+
+- **Unary `+`**
+  - Converts non-numbers to numbers:
+    ```js
+    +true // 1
+    +""   // 0
+    ```
+
+- **Operator Precedence**
+  - Parentheses `()` override order.
+  - unary > Exponentiation `**` > multiplication/division > addition/subtraction > assignment
+
+- **Assignment & Shorthand Operators**
+  - Simple: `x = value`
+  - Compound: `x += 1`, `x *= 2`, etc.
+
+- **Increment & Decrement**
+  - `++x` / `x++` (prefix/postfix increment)
+  - `--x` / `x--` (prefix/postfix decrement)
+
+- **Bitwise Operators**
+  - `&`, `|`, `^`, `~`, `<<`, `>>`, `>>>`
+  - Used for low-level operations on 32-bit binary numbers.
+
+- **Comma Operator**
+  - Evaluates multiple expressions, returns the last one:
+    ```js
+    let x = (1 + 2, 3 + 4); // x = 7
+    ```
+
+- **Comparison Operators**
+  - `<`, `>`, `<=`, `>=`, `==`, `!=`, `===`, `!==`
+  - Lexicographical comparison for strings.
+  - Mixed types get converted (except strict equality).
+  - `null == undefined` is true.
+  - Be cautious with `null` or `undefined` in comparisons.
+
+---
+
 ## 📅 Progress Log
 
 | Day | Topics Covered                                                                 |
 |-----|---------------------------------------------------------------------------------|
 | 1   | Script tag, Code structure, use strict, Variables, Data types, Interaction     |
 | 2   | Type Conversion                                                                |
-
+| 3   | Basic Operations, String Concatenation, Unary +, Operator Precedence,          |
+|     | Assignment, Shorthand Operators, Inc/Dec, Bitwise, Comma, Comparisons          |
 ---
 

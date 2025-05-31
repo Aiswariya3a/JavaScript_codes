@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Increment/decrement</title>
+  </head>
+  <body>
+    Increasing or decreasing a number <br />
+    Increment ++ increases a variable by 1<br />
+    Decrement -- decreases a variable by 1<br />
+    Increment/decrement can only be applied to variables. Trying to use it on a
+    value like 5++ will give an error.<br />
+    prefix form = ++count<br />
+    postfix form = count++ <br />
+    we can only see the difference if we use the returned value of ++/--.
+  </body>
+  <script>
+    let counter = 1;
+    let a = ++counter; // prefix form
+    let b = counter++; // postfix form
+
+    alert(a); // 2
+    alert(b); // 1
+  </script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Numeric conversion, unary plus</title>
+  </head>
+  <body>
+    The unary plus, applied to a single value, if the operand is not a number,
+    the unary plus converts it into a number.<br />
+    It actually does the same thing as Number(...), but is shorter.
+  </body>
+  <script>
+    // Converts non-numbers
+    alert(+true); // 1
+    alert(+""); // 0
+
+    let apples = "2";
+    let oranges = "3";
+
+    // both values converted to numbers before the binary plus
+    alert(+apples + +oranges); // 5
+
+    // the longer variant
+    // alert( Number(apples) + Number(oranges) ); // 5
+  </script>
+</html>

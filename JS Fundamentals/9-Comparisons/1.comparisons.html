@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comparisons</title>
+  </head>
+  <body>
+    All comparison operators return a boolean value:<br />
+    Normal comparison operators: <br />
+    <ul>
+      <li>Greater/less than: a > b, a &lt; b.</li>
+      <li>Greater/less than or equals: a >= b, a &lt;= b.</li>
+      <li>
+        Equals: a == b, double equality sign == means the equality test, while a
+        single one a = b means an assignment.
+      </li>
+      <li>
+        Not equals: In maths the notation is ≠, but in JavaScript it is written
+        as a != b.
+      </li>
+    </ul>
+    <br /><br />
+    To see whether a string is greater than another, JavaScript uses the
+    so-called “dictionary” or “lexicographical” order.<br />
+    When comparing values of different types, JavaScript converts the values to
+    numbers.<br />
+    For boolean values, true becomes 1 and false becomes 0.<br /><br />
+    A strict equality operator === checks the equality without type
+    conversion.<br />
+    In other words, if a and b are of different types, then a === b immediately
+    returns false without an attempt to convert them.<br />
+    There is also a “strict non-equality” operator !==
+  </body>
+  <script>
+    alert("Glow" > "Glee"); // true
+
+    alert(0 == false); // true
+    alert(0 === false); // false, because the types are different
+
+    alert(null == undefined); // true
+    alert(null === undefined); // false
+
+    //how!?
+    alert(null > 0); // (1) false
+    alert(null == 0); // (2) false
+    alert(null >= 0); // (3) true
+    //undefined shouldn’t be compared to other values
+    alert(undefined > 0); // false (1)
+    alert(undefined < 0); // false (2)
+    alert(undefined == 0); // false (3) - because undefined only equals null, undefined, and no other value.
+  </script>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment operator</title>
+  </head>
+  <body>
+    <p>
+      when we assign a variable, like x = 2 * 2 + 1, the calculations are done
+      first and then the = is evaluated, storing the result in x. <br />
+      '=' is an operator - All operators in JavaScript return a value - '='
+      returns a value too.<br />
+      <b
+        >The call <em>x = value</em> writes the value into x and then returns
+        it.</b
+      >
+    </p>
+    <h2>Chaining assignments</h2>
+    a = b = c = 2 + 2 is same as <br />
+    c = 2 + 2;<br />
+    b = c;<br />
+    a = c;<br />
+    Chained assignments evaluate from right to left.
+  </body>
+  <script>
+    let a = 1;
+    let b = 2;
+
+    let c = 3 - (a = b + 1); // first b+1 = (2)+1 = 3 then c=3-(a=3) then a=3 returns 3 so, c=3-3 then c=0
+
+    alert(a); // 3
+    alert(c); // 0
+  </script>
+</html>
