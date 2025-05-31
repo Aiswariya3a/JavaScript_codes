@@ -42,11 +42,42 @@ Welcome to my daily JavaScript learning journey! This README helps keep track of
 
 ---
 
+## ✅ Day 2 – Type Conversion
+
+### 📌 Topics Covered
+
+- **String Conversion**
+  - Happens when outputting values.
+  - Explicit conversion using `String(value)`.
+
+- **Numeric Conversion**
+  - Occurs in mathematical operations.
+  - Explicit conversion using `Number(value)`.
+  - Common conversion rules:
+    - `undefined` → `NaN`
+    - `null` → `0`
+    - `true` / `false` → `1` / `0`
+    - `" "` (space string) → trimmed and parsed
+    - `""` → `0`
+
+- **Boolean Conversion**
+  - Occurs in logical contexts.
+  - Explicit conversion using `Boolean(value)`.
+  - Falsy values: `0`, `null`, `undefined`, `NaN`, `""`
+  - All other values are truthy.
+
+- **Common Pitfalls**
+  - `undefined` becomes `NaN` (not `0`)
+  - `"0"` and `" "` are truthy values
+
+---
+
 ## 📅 Progress Log
 
 | Day | Topics Covered                                                                 |
 |-----|---------------------------------------------------------------------------------|
 | 1   | Script tag, Code structure, use strict, Variables, Data types, Interaction     |
+| 2   | Type Conversion                                                                |
 
 ---
 
