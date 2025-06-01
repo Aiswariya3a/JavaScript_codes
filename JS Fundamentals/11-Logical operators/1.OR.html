@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OR Operator</title>
+  </head>
+  <body>
+    The “OR” operator is represented with two vertical line symbols.<br />
+    It works with boolean only, If an operand is not a boolean, it is converted
+    to a boolean for the evaluation.<br />
+    If any of its arguments are true, it returns true, otherwise it returns
+    false.<br />
+    <br />
+    true || true => true<br />
+    false || true => true<br />
+    true || false => true<br />
+    false || false => false<br />
+    <br />
+    Given multiple OR'ed values, It evaluates operands from left to right.<br />
+    For each operand, converts it to boolean. <br />
+    If the result is <b>true</b>, stops and returns the
+    <b>original value of that operand</b>(returns the first true value).<br />
+    If all were <b>false</b>, returns the <b>last operand</b>.<br /><br />
+    Another feature of OR || operator is “short-circuit” evaluation => It means
+    srgumants are processed until the first truthy value is reached, and then
+    the value is returned immediately, without even touching the other
+    argument.<br />
+  </body>
+  <script>
+    let hour = 12;
+    let isWeekend = true;
+
+    if (hour < 10 || hour > 18 || isWeekend) {
+      //each condition returns boolean, which is testified
+      alert("The office is closed."); // it is the weekend
+    }
+
+    let firstName = "";
+    let lastName = "";
+    let nickName = "SuperCoder";
+
+    alert(firstName || lastName || nickName || "Anonymous"); // SuperCoder, nickname=SuperCoder is first truthy value.
+
+    alert(undefined || null || 0); // 0 (all falsy, returns the last value)
+
+    //short-circuit evaluation
+    true || alert("not printed");
+    false || alert("printed");
+  </script>
+</html>

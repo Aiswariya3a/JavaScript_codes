@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NOT Operator</title>
+  </head>
+  <body>
+    The boolean NOT operator is represented with an exclamation sign !.<br />
+    it returns the inverse value.<br />
+    A double NOT !! is sometimes used for converting a value to boolean type<br />
+    <p>
+      That is, the first NOT converts the value to boolean and returns the
+      inverse<br />
+      and the second NOT inverses it again. In the end, we have a plain
+      value-to-boolean conversion.
+    </p>
+    <b
+      >The precedence of NOT ! is the highest of all logical operators, so it
+      always executes first, before && or ||.</b
+    >
+  </body>
+  <script>
+    alert(!true); // false
+    alert(!0); // true
+
+    alert(!!"non-empty string"); // true ; !"string" = False...!False = True
+    alert(!!null); // false
+  </script>
+</html>

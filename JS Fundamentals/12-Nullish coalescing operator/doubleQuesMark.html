@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nullish coalescing operator '??'</title>
+  </head>
+  <body>
+    The nullish coalescing operator is written as two question marks ??.<br />
+    The result of a ?? b is:<br />
+
+    if a is defined, then a, <br />
+    if a it is not defined, then b.<br /><br />
+    ?? returns the first argument if it is not null/undefined. Otherwise, the
+    second one.<br />
+    result = a ?? b <b>=></b> result= (a !== null && a!== undefined)? a:b;
+    <br />
+    <h2>USE CASES</h2>
+    <br />
+    The common use case for ?? is to provide a default value.<br />
+    We can also use a sequence of ?? to select the first value from a list that
+    is not null/undefined.<br /><br />
+    The OR || operator can be used in the same way as ??<br />
+    <ul>
+      <li>
+        || returns the first truthy value. - does not distinguish between false,
+        0, an empty string "" and null/undefined
+      </li>
+      <li>?? returns the first defined value.</li>
+    </ul>
+    <br />
+    The precedence of the ?? operator is the same as ||<br />
+    Due to safety reasons, JavaScript forbids using ?? together with && and ||
+    operators, unless the precedence is explicitly specified with
+    parentheses.<br />
+    let x = 1 && 2 ?? 3;   // Syntax error<br />
+    let x = (1 && 2) ?? 3; // Works<br />
+  </body>
+  <script>
+    //use case 1
+    let user;
+    alert(user ?? "Anonymous"); // Anonymous (user is undefined)
+
+    //use case 2
+    let firstName = null;
+    let lastName = null;
+    let nickName = "Supercoder";
+    alert(firstName ?? lastName ?? nickName ?? "Anonymous"); // Supercoder - shows the first defined value (nickname)
+
+    // the above usecase is same as, alert(firstName || lastName || nickName || "Anonymous");
+
+    let age = 0;
+    alert(age || 100); // 100  -> || thinks 0 is false, so even though age is defined as 0 (possible), it is showing default value
+    alert(age ?? 100); // 0
+  </script>
+</html>

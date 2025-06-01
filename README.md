@@ -126,6 +126,50 @@ Welcome to my daily JavaScript learning journey! This README helps keep track of
   - Be cautious with `null` or `undefined` in comparisons.
 
 ---
+## ✅ Day 4 – Conditional Branching, Logical Operators & Nullish Coalescing
+
+### 📌 Topics Covered
+
+* **Conditional Branching: `if`, `else`, `else if`**
+
+  * `if (condition)` executes a block if the condition is truthy.
+  * `else` runs when the condition is falsy.
+  * `else if` checks additional conditions.
+  * Always use curly braces `{}` for better readability.
+
+* **Boolean Conversion in Conditions**
+
+  * Falsy values: `0`, `""`, `null`, `undefined`, `NaN`
+  * All other values are truthy.
+  * Conditions can use direct expressions or pre-evaluated booleans.
+
+* **Conditional (Ternary) Operator `?`**
+
+  * Short form of if–else:
+
+    ```js
+    let result = condition ? value1 : value2;
+    ```
+  * Can be nested for multiple conditions, though less readable.
+  * Best used for value assignment, not code execution.
+
+* **Logical Operators: `||`, `&&`, `!`**
+
+  * `||` returns the first truthy value or the last one.
+  * `&&` returns the first falsy value or the last one if all are truthy.
+  * `!` negates a boolean.
+  * Used for control flow and short-circuit evaluation.
+
+* **Nullish Coalescing Operator `??`**
+
+  * Returns the first defined value (not `null` or `undefined`):
+
+    ```js
+    let height = userHeight ?? 100;
+    ```
+  * Does **not** treat `0`, `false`, or `""` as undefined.
+  * Has precedence of 3; MUST use parentheses when combining with `||` or `&&`.
+  ---
 
 ## 📅 Progress Log
 
@@ -135,5 +179,7 @@ Welcome to my daily JavaScript learning journey! This README helps keep track of
 | 2   | Type Conversion                                                                |
 | 3   | Basic Operations, String Concatenation, Unary +, Operator Precedence,          |
 |     | Assignment, Shorthand Operators, Inc/Dec, Bitwise, Comma, Comparisons          |
+| 4   | Conditional Branching, Logical Operators, Nullish Coalescing Operator `??` |
+
 ---
 

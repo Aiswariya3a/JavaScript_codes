@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AND Operator</title>
+  </head>
+  <body>
+    The AND operator is represented with two ampersands &&<br />
+    AND returns true if both operands are truthy and false otherwise <br />
+    <br />
+    true && true => true<br />
+    false && true => false<br />
+    true && false => false<br />
+    false && false => false<br />
+    <br />
+    Given multiple AND'ed values, Evaluates operands from left to right.<br />
+    For each operand, converts it to a boolean<br />
+    If the result is <b>false</b>, stops and returns the
+    <b>original value</b> of that operand.<br />
+    If all were <b>truthy</b>, returns the <b>last operand</b>.<br />
+    <b>The precedence of AND && operator is higher than OR ||.</b>
+  </body>
+  <script>
+    let hour = 12;
+    let minute = 30;
+
+    if (hour == 12 && minute == 30) {
+      alert("The time is 12:30");
+    }
+
+    alert(1 && 2 && null && 3); // null ; null is first false value
+    alert(1 && 2 && 3); // 3, the last truthy value
+
+    let x = 1;
+    x > 0 && alert("Greater than zero!"); //using 'and' instead of if. The action in the right part of && would execute only if the condition is true. same as = if (x > 0) alert( 'Greater than zero!' );
+  </script>
+</html>

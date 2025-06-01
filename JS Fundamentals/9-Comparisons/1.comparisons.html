@@ -33,13 +33,15 @@
     There is also a “strict non-equality” operator !==
   </body>
   <script>
+    alert(typeof null);
+
     alert("Glow" > "Glee"); // true
 
     alert(0 == false); // true
     alert(0 === false); // false, because the types are different
 
     alert(null == undefined); // true
-    alert(null === undefined); // false
+    alert(null === undefined); // false  - typeof null is object, type of undefined is undefined => different types
 
     //how!?
     alert(null > 0); // (1) false

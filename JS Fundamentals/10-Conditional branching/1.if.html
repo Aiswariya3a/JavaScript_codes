@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The “if” statement</title>
+  </head>
+  <body>
+    The if (…) statement evaluates the expression in its parentheses and
+    converts the result to a boolean.<br />
+    A number 0, an empty string "", null, undefined, and NaN - false. <br />
+  </body>
+  <script>
+    let year = prompt(
+      "In which year was ECMAScript-2015 specification published?",
+      ""
+    );
+    if (year == 2015) {
+      alert("You are right!");
+    }
+
+    if (0) {
+      alert("This never runs");
+    }
+
+    if (1) {
+      alert("This runs");
+    }
+  </script>
+</html>

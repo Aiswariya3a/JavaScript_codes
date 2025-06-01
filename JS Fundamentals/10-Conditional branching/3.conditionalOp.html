@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conditional operator</title>
+  </head>
+  <body>
+    Conditional operator (ternary) is represented by a question mark ?. It has
+    three operands.<br />
+    It is actually the one and only operator in JavaScript which has Three
+    operands.<br />
+    The syntax is:<br />
+    let result = condition ? value1 : value2;<br />
+    The condition is evaluated: if true, then value1 is returned, otherwise -
+    value2.<br />
+  </body>
+  <script>
+    let accessAllowed;
+    let age = prompt("How old are you?", "");
+
+    if (age > 18) {
+      accessAllowed = "yes";
+    } else {
+      accessAllowed = "no";
+    }
+
+    alert(accessAllowed);
+
+    //multiple ?
+    age = prompt("age?", 18);
+
+    let message =
+      age < 3 //if below 3
+        ? "Hi, baby!" //true
+        : age < 18 //elseif below 18
+        ? "Hello!" //true
+        : age < 100 //elseif below 100
+        ? "Greetings!" //true
+        : "What an unusual age!"; //false
+
+    //same as
+    // if (age < 3) {
+    //   message = 'Hi, baby!';
+    // } else if (age < 18) {
+    //   message = 'Hello!';
+    // } else if (age < 100) {
+    //   message = 'Greetings!';
+    // } else {
+    //   message = 'What an unusual age!';
+    // }
+
+    alert(message);
+
+    //non traditional conditional operator
+
+    let company = prompt("Which company created JavaScript?", "");
+    company == "Netscape" ? alert("Right!") : alert("Wrong."); //instead of if - We don’t assign a result to a variable here. Instead, we execute different code depending on the condition.
+
+    
+  </script>
+</html>
