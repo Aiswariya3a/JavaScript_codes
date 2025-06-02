@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Labels for break/continue</title>
+  </head>
+  <body>
+    A label is an identifier with a colon before a loop (basically a name for
+    the for-loop)<br />
+    labelName: for (...) {<br />
+    ...<br />
+    }<br />
+    break &lt;labelName&gt; statement, the loop breaks the labeled loop<br />
+    continue &lt;labelName&gt; statement, the code execution jumps to the next
+    iteration of the labeled loop.<br />
+    <br />
+    Labels do not allow us to jump into an arbitrary place in the code.<br />
+    break label; // jump to the label below (doesn't work)<br />
+    label: for (...)<br />
+  </body>
+  <script>
+    outer: for (let i = 0; i < 3; i++) {
+      //outer is the label(name) of the outer loop
+      for (let j = 0; j < 3; j++) {
+        let input = prompt(`Value at coords (${i},${j})`, "");
+
+        // if an empty string or canceled, then break out of outer loop (both loops)
+        if (!input) break outer; // (*)
+
+        // do something with the value...
+      }
+    }
+
+    alert("Done!");
+  </script>
+</html>

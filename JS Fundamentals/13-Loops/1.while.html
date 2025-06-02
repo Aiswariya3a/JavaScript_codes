@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>“while” loop</title>
+  </head>
+  <body>
+    <h2>syntax</h2>
+    <br />
+    while (condition) {<br />
+    // loop body <br />
+    }<br />
+    the condition (can also be an expression or variable), is evaluated and converted to a boolean by while. (while (i != 0) => while (i))<br>
+
+    In practice, the browser provides ways to stop infinite loops, and in server-side JavaScript, we can kill the process.
+  </body>
+  <script>
+    let i = 0;
+    while (i < 3) {
+      // shows 0, then 1, then 2 - 3 iterations
+      alert(i);
+      i++;
+    }
+  </script>
+</html>

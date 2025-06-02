@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The “do…while” loop</title>
+  </head>
+  <body>
+    <h2>syntax</h2>
+    <br />
+    do {<br />
+    // loop body<br />
+    } while (condition);<br />
+    The loop will first execute the body, then check the condition, and, while
+    it is truthy, execute it again and again.<br />
+    used when you want the body of the loop to execute at least once regardless
+    of the condition being truthy.
+  </body>
+  <script>
+    let i = 0;
+    do {
+      alert(i);
+      i++;
+    } while (i < 3);
+  </script>
+</html>

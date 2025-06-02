@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Break and Continue</title>
+  </head>
+  <body>
+    <h2>break</h2>
+    <br />
+    we can force the exit at any time using the special break directive.<br />
+    The combination "infinite loop + break as needed" is great for situations
+    when a loop's condition must be checked in the middle or even in several
+    places of its body.
+    <h2>Continue</h2>
+    <br />
+    continue stops the current iteration and forces the loop to start a new one
+    (if the condition allows).<br />
+
+    <b>both cannot be used with the ternary operator ?.</b>This is just another
+    reason not to use the question mark operator ? instead of if.
+  </body>
+  <script>
+    //the loop below asks the user for a series of numbers, “breaking” when no number is entered
+    let sum = 0;
+    while (true) {
+      let value = +prompt("Enter a number", "");
+      if (!value) break; // (*)
+      sum += value;
+    }
+    alert("Sum: " + sum);
+
+    //The loop below uses continue to output only odd values
+    for (let i = 0; i < 10; i++) {
+      // if true, skip the remaining part of the body
+      if (i % 2 == 0) continue;
+      alert(i); // 1, then 3, 5, 7, 9
+    }
+  </script>
+</html>

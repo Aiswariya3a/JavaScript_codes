@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The “for” loop</title>
+  </head>
+  <body>
+    <h2>syntax</h2>
+    <br />
+    for (begin; condition; step) {<br />
+    // ... loop body ...<br />
+    }<br />
+    begin executes once, and then it iterates: after each condition test, body
+    and step are executed.<br />
+    a loop exits when its condition becomes falsy.<br />
+    <br />
+    The “counter” variable i can be declared right in the loop (let i=0;) This
+    is called an “inline” variable declaration. Such variables are visible only
+    inside the loop.<br />
+    Any part of for can be skipped. (begin, step or condition)<br />
+    for(;;) => infinite loop<br />
+  </body>
+  <script>
+    for (let i = 0; i < 3; i++) {
+      // shows 0, then 1, then 2
+      alert(i);
+    }
+  </script>
+</html>

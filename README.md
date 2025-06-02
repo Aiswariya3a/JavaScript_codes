@@ -169,17 +169,92 @@ Welcome to my daily JavaScript learning journey! This README helps keep track of
     ```
   * Does **not** treat `0`, `false`, or `""` as undefined.
   * Has precedence of 3; MUST use parentheses when combining with `||` or `&&`.
-  ---
 
-## 📅 Progress Log
+---
 
-| Day | Topics Covered                                                                 |
-|-----|---------------------------------------------------------------------------------|
-| 1   | Script tag, Code structure, use strict, Variables, Data types, Interaction     |
-| 2   | Type Conversion                                                                |
-| 3   | Basic Operations, String Concatenation, Unary +, Operator Precedence,          |
-|     | Assignment, Shorthand Operators, Inc/Dec, Bitwise, Comma, Comparisons          |
+## ✅ Day 5 – Loops, Break/Continue, and Switch
+
+### 📌 Topics Covered
+
+* **Loops in JavaScript**
+
+  * **`for` loop** – Ideal when the number of iterations is known.
+
+    ```js
+    for (let i = 0; i < 5; i++) {
+      console.log(i);
+    }
+    ```
+  * **`while` loop** – Runs as long as the condition is truthy.
+
+    ```js
+    let i = 0;
+    while (i < 5) {
+      console.log(i);
+      i++;
+    }
+    ```
+  * **`do...while` loop** – Runs at least once, even if the condition is false.
+
+    ```js
+    let i = 0;
+    do {
+      console.log(i);
+      i++;
+    } while (i < 5);
+    ```
+
+* **`break` and `continue`**
+
+  * `break` exits the loop immediately.
+  * `continue` skips the current iteration and proceeds with the next one.
+
+* **Labels with Loops**
+
+  * Labels allow breaking/continuing outer loops from inside nested ones:
+
+    ```js
+    outer: for (let i = 0; i < 3; i++) {
+      for (let j = 0; j < 3; j++) {
+        if (i === j) break outer;
+      }
+    }
+    ```
+
+* **`switch` Statement**
+
+  * Evaluates an expression and runs matching `case`.
+  * Uses strict comparison (`===`) by default.
+  * Always include `break` to avoid "fall-through" unless intentionally done.
+  * A `default` case is optional but recommended.
+
+    ```js
+    let color = "green";
+
+    switch (color) {
+      case "red":
+        console.log("Stop");
+        break;
+      case "green":
+        console.log("Go");
+        break;
+      default:
+        console.log("Unknown color");
+    }
+    ```
+
+---
+
+### 📅 Progress Log
+
+| Day | Topics Covered                                                             |
+| --- | -------------------------------------------------------------------------- |
+| 1   | Script tag, Code structure, use strict, Variables, Data types, Interaction |
+| 2   | Type Conversion                                                            |
+| 3   | Basic Operations, String Concatenation, Unary +, Operator Precedence,      |
+|     | Assignment, Shorthand Operators, Inc/Dec, Bitwise, Comma, Comparisons      |
 | 4   | Conditional Branching, Logical Operators, Nullish Coalescing Operator `??` |
+| 5   | Loops (`for`, `while`, `do...while`), break, continue, labels, switch      |
 
 ---
 
